@@ -11,7 +11,12 @@ export function Experience() {
             <h3>{item.role}</h3>
             <p className="timeline__company">{item.company}</p>
             <p className="timeline__location">{item.location}</p>
-            <p>{item.summary}</p>
+            {item.summary ? <p>{item.summary}</p> : null}
+            <ul className="check-list">
+              {item.achievements.map((achievement) => (
+                <li key={achievement}>{achievement}</li>
+              ))}
+            </ul>
           </div>
         </article>
       ))}

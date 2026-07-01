@@ -9,6 +9,7 @@ export function Contact() {
           Based in {profile.location}. Focused on Java, Spring Boot, PostgreSQL, REST APIs,
           transactional workflows, authentication, event-driven systems, tests, Docker, and CI/CD.
         </p>
+        <p className="contact-meta">{profile.email} | {profile.phone}</p>
       </div>
       <div className="contact-actions">
         <a className="button button--primary" href={`mailto:${profile.email}`}>

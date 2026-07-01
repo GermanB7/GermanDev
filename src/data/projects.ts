@@ -2,7 +2,9 @@ export type Project = {
   name: string;
   status: string;
   description: string;
-  impact: string;
+  backendDesign: string;
+  dataConsistency: string;
+  testing: string;
   stack: string[];
   highlights: string[];
   links: {
@@ -13,59 +15,69 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: 'RelaxOS — Personal Decision System',
-    status: 'Public backend project',
+    name: 'Neobank Backend',
+    status: 'Public repository | Local Docker setup | CI-ready backend',
     description:
-      'A modular monolith decision platform for independent-living scenarios, expenses, score snapshots, risk factors, recommendations, adaptive modes, meals, and dashboard aggregation.',
-    impact:
-      'Shows backend ownership of business rules, scoring logic, authentication, persistence, and operational workflows.',
-    stack: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Docker', 'Flyway', 'JWT', 'GitHub Actions'],
+      'Finance-style backend focused on account ownership, transactional money movement, transfer lifecycle, ledger recording, reversals, reconciliation, auditability, and operational recovery.',
+    backendDesign:
+      'Modular monolith with Spring Boot, Spring Security, role/ownership authorization, service-layer transaction boundaries, and Kafka publication through an outbox flow.',
+    dataConsistency:
+      'Uses deterministic account locking, explicit ledger records, double-entry validation, reversals, reconciliation flows, and Flyway-managed PostgreSQL schema changes.',
+    testing:
+      'Includes backend validation for transfer behavior, ledger rules, authorization paths, CI checks, and operational visibility through Actuator, Micrometer, Prometheus, and Grafana.',
+    stack: ['Java 21', 'Spring Boot', 'Spring Security', 'PostgreSQL', 'Redis', 'Kafka', 'Flyway', 'Docker', 'Prometheus/Grafana'],
     highlights: [
-      'Rule-based recommendation engine.',
-      'Backend-owned scoring and risk logic.',
-      'JWT authentication and ownership checks.',
-      'Dockerized local environment.',
-      'Database migrations with Flyway.',
-      'Backup and restore workflows.',
-      'CI validation and tests.',
+      'Transactional boundaries for money movement.',
+      'Deterministic account locking.',
+      'Double-entry ledger validation.',
+      'Role and ownership authorization.',
+      'Transactional outbox before Kafka publication.',
+      'Metrics-oriented observability setup.',
     ],
-    links: [{ label: 'Repository', href: 'https://github.com/GermanB7/RelaxOs' }],
+    links: [{ label: 'Review code on GitHub', href: 'https://github.com/GermanB7/neobank-backend' }],
   },
   {
-    name: 'Neobank Backend',
-    status: 'Fintech backend project',
+    name: 'RelaxOS — Personal Decision System',
+    status: 'Public repository | Dockerized local environment | CI validation',
     description:
-      'A fintech-style backend focused on transactional correctness, account ownership, ledger operations, reversals, reconciliation, and event-driven workflows.',
-    impact:
-      'Demonstrates careful handling of money movement, consistency, auditability, and asynchronous backend processes.',
-    stack: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'Kafka', 'Docker', 'Flyway', 'Spring Security', 'JWT'],
+      'Decision-support system that evaluates move-out scenarios, expenses, meals, risk factors, and recommendations through backend-owned scoring rules.',
+    backendDesign:
+      'Modular monolith with Spring Boot services for scenarios, expenses, scoring snapshots, adaptive modes, meals, admin flows, dashboard aggregation, and backup/restore scripts.',
+    dataConsistency:
+      'Backend-owned deterministic rules cover scoring, risk analysis, scenario comparison, transport evaluation, recommendation lifecycle, JWT ownership checks, and Flyway migrations.',
+    testing:
+      'Uses Docker configuration, backend tests, frontend build checks, GitHub Actions validation, and operational documentation for local setup and recovery workflows.',
+    stack: ['Java 21', 'Spring Boot', 'React', 'PostgreSQL', 'Docker', 'Flyway', 'JWT', 'GitHub Actions'],
     highlights: [
-      'Modular monolith architecture.',
-      'Atomic money movement workflows.',
-      'Double-entry ledger logic.',
-      'Reversals and reconciliation.',
-      'Transactional outbox pattern.',
-      'Kafka-based asynchronous workflows.',
-      'Observability with metrics and dashboards.',
+      'Rule-based recommendation engine in backend services.',
+      'Deterministic scoring and risk logic.',
+      'JWT authentication and ownership checks.',
+      'Flyway-managed database migrations.',
+      'Backup and restore workflows.',
+      'CI validation and backend tests.',
     ],
-    links: [{ label: 'Repository', href: 'https://github.com/GermanB7/neobank-backend' }],
+    links: [{ label: 'Review code on GitHub', href: 'https://github.com/GermanB7/RelaxOs' }],
   },
   {
     name: 'Event-Driven Order Management System',
-    status: 'Event-driven backend project',
+    status: 'Public repository | Event-driven workflow | Integration tests',
     description:
-      'An event-driven backend system for order orchestration, inventory reservation, payment coordination, compensation flows, retries, idempotency, dead-letter queues, replay workflows, and observability.',
-    impact:
-      'Highlights distributed workflow thinking: idempotency, retries, replayability, event boundaries, and integration testing.',
-    stack: ['Java', 'Spring Boot', 'Kafka', 'PostgreSQL', 'Docker', 'Outbox Pattern', 'Integration Testing'],
+      'Order orchestration backend with modular boundaries for orders, inventory, payments, shipping, workflow, messaging, outbox, observability, and shared primitives.',
+    backendDesign:
+      'Spring Boot backend using saga-style orchestration, Kafka asynchronous delivery, compensation flows, retry/backoff behavior, dead-letter queues, and replay endpoints.',
+    dataConsistency:
+      'Uses a transactional outbox to persist events with state changes before asynchronous publication, plus idempotent consumers to reduce duplicate side effects.',
+    testing:
+      'Includes integration tests and architecture tests around workflow boundaries, messaging behavior, compensation paths, and shared primitives.',
+    stack: ['Java 21', 'Spring Boot', 'PostgreSQL', 'Kafka', 'Flyway', 'Docker', 'Micrometer', 'Integration Testing'],
     highlights: [
-      'Event-driven order orchestration.',
-      'Transactional outbox.',
-      'Idempotent consumers.',
+      'Order, inventory, payment, shipping, and workflow modules.',
+      'Transactional outbox with Kafka delivery.',
+      'Idempotent consumers and compensation flows.',
       'Retry and dead-letter queue handling.',
-      'Replay workflows.',
+      'Replay endpoint for operational recovery.',
       'Integration and architecture tests.',
     ],
-    links: [{ label: 'Repository', href: 'https://github.com/GermanB7/event-driven-order-management-system' }],
+    links: [{ label: 'Review code on GitHub', href: 'https://github.com/GermanB7/event-driven-order-management-system' }],
   },
 ];

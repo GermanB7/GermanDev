@@ -2,12 +2,11 @@ export function ValueProposition() {
   return (
     <div className="value-grid">
       <article className="value-card value-card--wide">
-        <h3>Backend systems where correctness and operational clarity matter</h3>
+        <h3>What I can be hired for</h3>
         <p>
-          I focus on backend systems where correctness, maintainability, security, and operational
-          clarity matter. My work emphasizes modular architecture, service-layer design, database
-          consistency, authentication and authorization, event-driven workflows, tests,
-          documentation, and CI/CD.
+          Java/Spring Boot REST API development, PostgreSQL-backed transactional workflows,
+          Dockerized backend services with CI/CD, and authentication, authorization, and integration
+          testing.
         </p>
       </article>
       <article className="value-card">

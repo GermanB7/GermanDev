@@ -11,7 +11,6 @@ export function Hero() {
   const socialLinks = [
     { label: 'GitHub', href: profile.github },
     { label: 'LinkedIn', href: profile.linkedin },
-    { label: 'Email', href: `mailto:${profile.email}` },
   ];
 
   return (
@@ -38,9 +37,10 @@ export function Hero() {
       <div className="hero__content" id="top">
         <div className="hero__copy">
           <p className="availability">
-            {profile.name} | {profile.role} | {profile.location}
+            {profile.role} | {profile.location}
           </p>
           <h1>{profile.headline}</h1>
+          <p className="hero__positioning">{profile.positioning}</p>
           <p className="hero__lead">{profile.summary}</p>
           <div className="hero__actions" aria-label="Primary actions">
             <a className="button button--primary" href="#projects">
@@ -51,6 +51,7 @@ export function Hero() {
             </a>
           </div>
           <div className="social-links" aria-label="Social links">
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
             {socialLinks.map((link) => (
               <a
                 key={link.label}

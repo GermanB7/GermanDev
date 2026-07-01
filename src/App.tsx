@@ -16,13 +16,13 @@ export default function App() {
         <Section id="value" eyebrow="Value proposition" title="Backend systems built for business-critical work">
           <ValueProposition />
         </Section>
-        <Section id="projects" eyebrow="Featured projects" title="Public backend projects with production-shaped decisions">
+        <Section id="projects" eyebrow="Featured projects" title="Public backend projects with clear technical evidence">
           <FeaturedProjects />
         </Section>
         <Section id="strengths" eyebrow="Engineering strengths" title="Practical depth across backend delivery">
           <Strengths />
         </Section>
-        <Section id="experience" eyebrow="Professional experience" title="Real delivery experience in backend and operations">
+        <Section id="experience" eyebrow="Professional experience" title="Full-stack roles with backend emphasis">
           <Experience />
         </Section>
         <Section id="stack" eyebrow="Tech stack" title="Tools used to ship reliable APIs and workflows">

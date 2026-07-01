@@ -11,7 +11,20 @@ export function FeaturedProjects() {
             <h3>{project.name}</h3>
           </div>
           <p className="project-card__description">{project.description}</p>
-          <p className="project-card__impact">{project.impact}</p>
+          <dl className="project-card__details">
+            <div>
+              <dt>Backend design</dt>
+              <dd>{project.backendDesign}</dd>
+            </div>
+            <div>
+              <dt>Data and consistency</dt>
+              <dd>{project.dataConsistency}</dd>
+            </div>
+            <div>
+              <dt>Testing and operations</dt>
+              <dd>{project.testing}</dd>
+            </div>
+          </dl>
           <ul className="check-list">
             {project.highlights.map((highlight) => (
               <li key={highlight}>{highlight}</li>

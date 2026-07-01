@@ -6,7 +6,7 @@ export type SkillGroup = {
 export const skillGroups: SkillGroup[] = [
   {
     title: 'Backend',
-    items: ['Java', 'Spring Boot', 'Python', 'Django', 'Django REST Framework'],
+    items: ['Java', 'Spring Boot', 'Spring Security', 'Spring Data JPA', 'Python', 'Django', 'DRF', 'REST APIs', 'JWT'],
   },
   {
     title: 'Databases',
@@ -14,7 +14,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: 'Messaging / Async',
-    items: ['Kafka', 'Celery', 'Transactional Outbox'],
+    items: ['Kafka', 'Celery', 'Transactional Outbox', 'Event-Driven Workflows'],
   },
   {
     title: 'DevOps',
@@ -25,12 +25,16 @@ export const skillGroups: SkillGroup[] = [
     items: ['JUnit', 'MockMvc', 'Pytest', 'Postman'],
   },
   {
+    title: 'Observability',
+    items: ['Actuator', 'Micrometer', 'Prometheus', 'Grafana'],
+  },
+  {
     title: 'Frontend',
     items: ['React', 'Vue 3', 'Vuetify', 'Flutter'],
   },
   {
     title: 'Tools',
-    items: ['Git', 'Swagger/OpenAPI', 'Flyway', 'Maven', 'Notion', 'Wiki.js'],
+    items: ['Git', 'Swagger/OpenAPI', 'Flyway', 'Maven', 'Notion', 'Wiki.js', 'SQL'],
   },
 ];
 
