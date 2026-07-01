@@ -56,8 +56,8 @@ export function Hero() {
               <a
                 key={link.label}
                 href={link.href}
-                target={link.label === 'Email' ? undefined : '_blank'}
-                rel={link.label === 'Email' ? undefined : 'noreferrer'}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {link.label}
               </a>

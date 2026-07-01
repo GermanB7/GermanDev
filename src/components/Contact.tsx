@@ -15,11 +15,14 @@ export function Contact() {
         <a className="button button--primary" href={`mailto:${profile.email}`}>
           Email Germán
         </a>
-        <a className="button button--secondary" href={profile.github} target="_blank" rel="noreferrer">
+        <a className="button button--secondary" href={profile.github} target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
-        <a className="button button--secondary" href={profile.linkedin} target="_blank" rel="noreferrer">
+        <a className="button button--secondary" href={profile.linkedin} target="_blank" rel="noopener noreferrer">
           LinkedIn
+        </a>
+        <a className="button button--secondary" href={profile.cvSpanish} download>
+          CV ES
         </a>
       </div>
     </div>

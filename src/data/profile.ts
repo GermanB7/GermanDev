@@ -10,7 +10,6 @@ export const profile = {
   phone: '+57 313 491 6799',
   github: 'https://github.com/GermanB7',
   linkedin: 'https://www.linkedin.com/in/german-bernal-698067274',
-  cv: '/German-Bernal-CV-Java-Backend-EN.pdf',
-  cvSpanish: '/German-Bernal-CV-Backend-ES.pdf',
-  education: 'Universidad Nacional de Colombia — Systems and Computing Engineering, expected graduation 2027',
+  cv: '/cv/German-Bernal-CV-Java-Backend-EN.pdf',
+  cvSpanish: '/cv/German-Bernal-CV-Backend-ES.pdf',
 };

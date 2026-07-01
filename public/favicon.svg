@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GCBL">
+  <rect width="64" height="64" rx="12" fill="#05070b"/>
+  <path d="M12 44V20h16v6H19v12h9v6H12Zm25 0c-3.7 0-6.7-1.1-9-3.3-2.3-2.2-3.4-5.1-3.4-8.7s1.1-6.5 3.4-8.7c2.3-2.2 5.3-3.3 9-3.3h11v6H37.2c-1.8 0-3.2.5-4.2 1.6-1 1.1-1.5 2.5-1.5 4.4s.5 3.3 1.5 4.4c1 1.1 2.4 1.6 4.2 1.6H42v-3.5h-5.5V29H49v15H37Z" fill="#63d4ff"/>
+  <path d="M8 53h48" stroke="#89e7b3" stroke-width="3" stroke-linecap="round"/>
+</svg>

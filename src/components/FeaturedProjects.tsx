@@ -37,7 +37,7 @@ export function FeaturedProjects() {
           </div>
           <div className="project-card__links">
             {project.links.map((link) => (
-              <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+              <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">
                 {link.label}
               </a>
             ))}
